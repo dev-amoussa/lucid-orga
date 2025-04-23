@@ -1,0 +1,193 @@
+direction: down
+
+# === Bloc Direction ===
+Direction: {
+    Aniss: "Aniss\nCEO & Vision" {
+        shape: image
+        icon: ./aniss.png
+        width: 200
+        height: 200
+        style: {
+        fill: lavenderblush
+        stroke: "#5fa8d3"
+        stroke-width: 1
+        }
+    }
+
+    Lucie: "Lucie\nStrategic Orchestrator" {
+        shape: image
+        icon: ./aniss.png
+        width: 180
+        height: 180
+        style: {
+        fill: lavenderblush
+        stroke: "#5fa8d3"
+        stroke-width: 1
+        }
+    }
+
+    Lyra: "Lyra\nOps & Flow Coordinator" {
+        shape: image
+        icon: ./aniss.png
+        width: 180
+        height: 180
+        style: {
+        fill: lavenderblush
+        stroke: "#5fa8d3"
+        stroke-width: 1
+        }
+    }
+
+    Aniss -> Lucie: "co-pilote"
+    Lucie -> Lyra
+}
+
+# === Bloc Tech & Produit ===
+"Tech & Produit": {
+    Aurore: "Aurore\nArchitecture & Spec" {
+        shape: image
+        icon: ./aniss.png
+        width: 160
+        height: 160
+        style: {
+        fill: lavenderblush
+        stroke: "#5fa8d3"
+        stroke-width: 1
+        }
+    }
+
+    Cassandre: "Cassandre\nPrompt & UX Narrative" {
+        shape: image
+        icon: ./aniss.png
+        width: 160
+        height: 160
+        style: {
+        fill: lavenderblush
+        stroke: "#5fa8d3"
+        stroke-width: 1
+        }
+    }
+
+    Milo: "Milo\nCode Gen & Iteration" {
+        shape: image
+        icon: ./aniss.png
+        width: 160
+        height: 160
+        style: {
+        fill: lavenderblush
+        stroke: "#5fa8d3"
+        stroke-width: 1
+        }
+    }
+
+    Lyra -> Aurore
+    Lyra -> Cassandre
+    Lyra -> Milo
+}
+
+# === Bloc Business & Impact ===
+"Business & Impact": {
+    Axel: "Axel\nStrategic Market Designer" {
+        shape: image
+        icon: ./aniss.png
+        width: 160
+        height: 160
+        style: {
+        fill: lavenderblush
+        stroke: "#5fa8d3"
+        stroke-width: 1
+        }
+    }
+
+    Jules: "Jules\nBusiness Narrative Writer" {
+        shape: image
+        icon: ./aniss.png
+        width: 160
+        height: 160
+        style: {
+        fill: lavenderblush
+        stroke: "#5fa8d3"
+        stroke-width: 1
+        }
+    }
+
+    Zoé: "Zoé\nInvestor Briefing Lead" {
+        shape: image
+        icon: ./aniss.png
+        width: 160
+        height: 160
+        style: {
+        fill: lavenderblush
+        stroke: "#5fa8d3"
+        stroke-width: 1
+        }
+    }
+
+    Mehdi: "Mehdi\nRevenue Designer" {
+        shape: image
+        icon: ./aniss.png
+        width: 160
+        height: 160
+        style: {
+        fill: lavenderblush
+        stroke: "#5fa8d3"
+        stroke-width: 1
+        }
+    }
+
+    Naïma: "Naïma\nProduct Launch Strategist" {
+        shape: image
+        icon: ./aniss.png
+        width: 160
+        height: 160
+        style: {
+        fill: lavenderblush
+        stroke: "#5fa8d3"
+        stroke-width: 1
+        }
+    }
+
+    Gaël: "Gaël\nGrowth & Social Pulse" {
+        shape: image
+        icon: ./aniss.png
+        width: 160
+        height: 160
+        style: {
+        fill: lavenderblush
+        stroke: "#5fa8d3"
+        stroke-width: 1
+        }
+    }
+
+    Lyra -> Axel
+    Axel -> Jules
+    Axel -> Zoé
+    Axel -> Mehdi
+    Mehdi -> Naïma
+    Naïma -> Gaël
+}
+
+# === Liens transverses ===
+Jules -> Cassandre: "brief UX" {
+    style: {
+    stroke: "#5fa8d3"
+    }
+}
+
+Zoé -> Aniss: "résumés impact" {
+    style: {
+    stroke: "#5fa8d3"
+    }
+}
+
+Milo -> Gaël: "inputs" {
+    style: {
+    stroke: "#5fa8d3"
+    }
+}
+
+Cassandre -> Jules: "feedback narratif" {
+    style: {
+    stroke: "#5fa8d3"
+    }
+}

@@ -1,0 +1,56 @@
+graph TD
+
+  %% Bloc direction
+  subgraph Direction
+    Aniss["Aniss\nCEO & Vision"]
+    Lucie["Lucie\nStrategic Orchestrator"]
+    Lyra["Lyra\nOps & Flow Coordinator"]
+  end
+
+  %% Bloc Tech & Produit
+  subgraph Tech_Produit["Tech & Produit"]
+    Aurore["Aurore\nArchitecture & Spec"]
+    Cassandre["Cassandre\nPrompt & UX Narrative"]
+    Milo["Milo\nCode Gen & Iteration"]
+  end
+
+  %% Bloc Business & Impact
+  subgraph Business_Impact["Business & Impact"]
+    Axel["Axel\nStrategic Market Designer"]
+    Jules["Jules\nBusiness Narrative Writer"]
+    Zoé["Zoé\nInvestor Briefing Lead"]
+    Mehdi["Mehdi\nRevenue Designer"]
+    Naïma["Naïma\nProduct Launch Strategist"]
+    Gaël["Gaël\nGrowth & Social Pulse"]
+  end
+
+  %% Liens hiérarchiques / opérationnels
+  Aniss -->|co-pilote| Lucie
+  Lucie --> Lyra
+
+  Lyra --> Aurore
+  Lyra --> Cassandre
+  Lyra --> Milo
+
+  Lyra --> Axel
+  Axel --> Jules
+  Axel --> Zoé
+  Axel --> Mehdi
+  Mehdi --> Naïma
+  Naïma --> Gaël
+
+  %% Liens transverses
+  Jules -->|brief UX| Cassandre
+  Zoé -->|résumés impact| Aniss
+  Milo -->|inputs| Gaël
+  Cassandre -->|feedback narratif| Jules
+
+  %% Styles
+  classDef core fill:#ffe9cc,stroke:#000,stroke-width:1px;
+  class Aniss,Lucie,Lyra core;
+
+  classDef tech fill:#d5f5e3,stroke:#000,stroke-width:1px;
+  class Aurore,Cassandre,Milo tech;
+
+  classDef biz fill:#d6eaf8,stroke:#000,stroke-width:1px;
+  class Axel,Jules,Zoé,Mehdi,Naïma,Gaël biz;
